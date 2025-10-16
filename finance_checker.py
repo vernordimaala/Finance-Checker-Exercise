@@ -97,7 +97,7 @@ class FinanceChecker:
         """
         total_expenses = self.get_total_expenses()
         remaining = self.get_remaining_budget()
-        percentage_used = (total_expenses / self.monthly_budget * 100) if self.monthly_budget > 0 else 0
+        percentage_used = ((total_expenses / self.monthly_budget) * 100) if self.monthly_budget > 0 else 0
         
         return {
             "monthly_budget": self.monthly_budget,
